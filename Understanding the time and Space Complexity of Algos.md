@@ -55,19 +55,23 @@ Space Complexity:
 7. Quick Sort
 Description: Selects a 'pivot' element and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
 Time Complexity: 
+-Best & Average Case: O(n log n)
+-Worst Case: O(n²)
 Space Complexity:
+-Average Case: O(log n) 
+-Worst Case: O(n) 
 
 
 8. Breadth-First Search (BFS)
 Description: Explores a graph level by level, visiting all neighbors of a node before moving to the next level.
-Time Complexity: 
-Space Complexity:
+Time Complexity: O(V + E) (where V is vertices and E is edges)
+Space Complexity: O(V)
 
 
 9. Depth-First Search (DFS)
 Description: Explores a graph by going as deep as possible along each branch before backtracking.
-Time Complexity: 
-Space Complexity:
+Time Complexity: O(V + E) (where V is vertices and E is edges)
+Space Complexity: O(V) 
 
 
 10. Dijkstra's Algorithm
