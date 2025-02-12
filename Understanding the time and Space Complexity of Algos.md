@@ -36,20 +36,22 @@ Description: Repeatedly steps through the list, compares adjacent elements and s
 
 4. Selection Sort
 Description: Divides the input list into a sorted and an unsorted region, repeatedly selects the smallest element from the unsorted region to add to the sorted region.
-Time Complexity: 
-Space Complexity:
+Time Complexity: O(n²)
+Space Complexity: O(1)
 
 
 5. Insertion Sort
 Description: Builds the final sorted array one item at a time, by repeatedly inserting a new element into the sorted portion of the array.
 Time Complexity: 
-Space Complexity:
+-Best Case: O(n) 
+-Average & Worst Case: O(n²)
+Space Complexity: O(1)
 
 
 6. Merge Sort
 Description: Divides the array into two halves, recursively sorts them, and then merges the sorted halves.
-Time Complexity: 
-Space Complexity:
+Time Complexity: O(n log n)
+Space Complexity: O(n)
 
 
 7. Quick Sort
