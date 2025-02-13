@@ -223,7 +223,30 @@ Example: `/search?query=term&category=books&page=1`
 **TODO:** Add space and time complexity analysis for different caching strategies
 
 ## Error Scenarios
-- **TODO:**Complete the error scenarios
+1. 404 Not Found
+-Cause: The requested resource is not found on the server.
+-Client-Side Handling: Ensure the correct URL is used, implement user-friendly error pages, and provide search suggestions.
+-Server-Side Handling: Log missing requests, set up redirects if necessary, and configure a custom 404 page.
+
+2. 500 Internal Server Error
+-Cause: A generic server-side error due to misconfiguration, script failure, or database errors.
+-Client-Side Handling: Refresh the page, try again later, or contact support.
+-Server-Side Handling: Check server logs, fix application errors, and ensure database connections are stable.
+
+3. 403 Forbidden
+-Cause: The client does not have permission to access the resource.
+-Client-Side Handling: Verify user authentication, request access if needed.
+-Server-Side Handling: Ensure correct permission settings and provide informative error messages.
+
+4. 408 Request Timeout
+-Cause: The server timed out waiting for the client's request.
+-Client-Side Handling: Retry the request, check network connectivity.
+-Server-Side Handling: Optimize request processing time and adjust timeout settings.
+
+5. 429 Too Many Requests
+-Cause: The client has sent too many requests in a short period (rate limiting enforced).
+-Client-Side Handling: Implement exponential backoff and reduce request frequency.
+-Server-Side Handling: Configure rate limiting policies and provide informative headers (e.g., Retry-After).
 
 ## Security Considerations
 - **TODO:**Complete the security considerations
