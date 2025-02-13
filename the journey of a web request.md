@@ -235,7 +235,25 @@ Example: `/search?query=term&category=books&page=1`
 - Downloads additional resources (CSS, JS, images)
 - Renders the page
 
-**TODO:** Add details about browser rendering pipeline and critical rendering path
+## Browser Rendering Pipeline
+1. HTML Parsing & DOM Construction
+-The browser parses the HTML and constructs the Document Object Model (DOM) tree.
+2. CSS Parsing & CSSOM Construction
+-CSS rules are parsed and converted into the CSS Object Model (CSSOM).
+3. Render Tree Construction
+-The DOM and CSSOM are combined to create the Render Tree, which determines what will be displayed.
+4. Layout (Reflow)
+-The browser calculates the size and position of each element on the page.
+5. Painting
+-The browser converts the elements into actual pixels on the screen.
+6. Compositing
+-If there are multiple layers, they are combined to render the final frame.
+
+## Critical Rendering Path
+The Critical Rendering Path (CRP) refers to the sequence of steps that the browser follows to convert HTML, CSS, and JavaScript into pixels.
+
+-Minimizing CRP improves page load speed.
+-Techniques like lazy loading, asynchronous JavaScript execution, and minification help optimize the rendering process.
 
 ## Common Optimization Techniques
 - Content Delivery Networks (CDNs)
