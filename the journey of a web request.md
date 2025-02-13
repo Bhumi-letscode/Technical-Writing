@@ -225,9 +225,17 @@ Example: `/search?query=term&category=books&page=1`
 - Response is generated
 
 ## 6. Response Journey
-- Server sends HTTP response
-- **TODO:**Complete the response journey
-- Data travels back through the network
+1. Server sends the HTTP response
+-The response includes headers (e.g., Content-Type, Cache-Control) and the response body.
+-The server may apply compression (e.g., Gzip, Brotli) to reduce response size.
+
+2. Response travels through the network
+-The response moves through various network layers (TCP/IP stack).
+-If content is cached at any intermediary (CDN, ISP, router cache), it may serve the response directly.
+
+3.Browser receives the response
+-The browser checks the HTTP status code (e.g., 200 OK, 404 Not Found).
+-If the response contains HTML, it begins rendering.
 
 ## 7. Browser Processing
 - Browser receives the response
