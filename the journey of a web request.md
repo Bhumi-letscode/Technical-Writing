@@ -246,7 +246,26 @@ Example: `/search?query=term&category=books&page=1`
 **TODO:** Add space and time complexity analysis for different caching strategies
 
 ## Error Scenarios
-- **TODO:**Complete the error scenarios
+
+1. 404 Not Found
+-Cause: The requested resource does not exist on the server.
+-Client Handling: Check the URL, ensure proper routing, and handle errors gracefully.
+-Server Handling: Return a user-friendly 404 page and log the missing URL for debugging.
+
+2. 500 Internal Server Error
+-Cause: A generic server error due to application failure or misconfiguration.
+-Client Handling: Retry the request or inform the user of an issue.
+-Server Handling: Log errors, use structured exception handling, and monitor server health.
+
+3. 403 Forbidden
+-Cause: The user does not have permission to access the resource.
+-Client Handling: Ensure proper authentication and authorization.
+-Server Handling: Implement proper access control mechanisms and meaningful error messages.
+
+4. 400 Bad Request
+-Cause: The client request is malformed or contains invalid parameters.
+-Client Handling: Validate request format and data before sending.
+-Server Handling: Provide clear error messages indicating the issue.
 
 ## Security Considerations
 Security Considerations:
