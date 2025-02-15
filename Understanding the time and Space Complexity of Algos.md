@@ -70,6 +70,21 @@ Space Complexity:
 
 7. Quick Sort
 Description: Selects a 'pivot' element and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
+Quick Sort is a **divide-and-conquer sorting algorithm** that selects a pivot element and partitions the array into two subarrays:  
+- One with elements smaller than the pivot  
+- Another with elements greater than the pivot
+  
+It then recursively sorts both subarrays.
+
+**Time Complexity:**
+- **Best Case:** \(O(n log n)\) → Occurs when the pivot divides the array into two nearly equal halves, leading to balanced recursion.
+- **Average Case:** \(O(n log n)\) → On average, random pivots tend to create balanced partitions.
+- **Worst Case:** \(O(n^2)\) → Occurs when the pivot always picks the smallest or largest element, leading to highly unbalanced partitions.
+
+**Space Complexity:**
+- **In-place implementation:** \(O(log n)\) due to recursive calls in the best and average cases.
+- **Worst Case:** \(O(n)\) if recursion depth reaches \(n\) in an unbalanced partition.
+- **Extra space (if using additional arrays):** \(O(n)\), but this is not typical in in-place Quick Sort.
 
 **Working Principle**
 - Divide: A pivot element is chosen, and the array is partitioned such that elements smaller than the pivot are placed on the left and larger elements on the right.
@@ -111,18 +126,57 @@ Merge Sort and Quick Sort are two classic examples of **Divide and Conquer** alg
 
 
 8. Breadth-First Search (BFS)
+   
 Description: Explores a graph level by level, visiting all neighbors of a node before moving to the next level.
-Time Complexity: 
-Space Complexity:
+BFS is a **graph traversal algorithm** that explores nodes **level by level**, making it suitable for shortest path problems in an unweighted graph.  
+It uses a **queue** to keep track of nodes to be visited.
 
+**Time Complexity:**
+- **Adjacency List Representation:** \(O(V + E)\)  
+  - Each vertex is processed once, and each edge is explored once.
+- **Adjacency Matrix Representation:** \(O(V^2)\)  
+  - Checking all adjacent vertices takes \(O(V)\) per vertex.
+
+**Space Complexity:**
+- **Queue:** \(O(V)\) → In the worst case, all vertices at the largest level are stored.
+- **Visited Array:** \(O(V)\) → Stores visited nodes.
+- **Adjacency List Storage:** \(O(V + E)\)
+- **Total:** \(O(V + E)\) for adjacency list representation.
+
+**Visualization of BFS Traversal:**
+
+![image](https://github.com/user-attachments/assets/78aeb7d2-289d-4668-a709-ed523c5e382a)
+
+![image](https://github.com/user-attachments/assets/8f1f6b1f-16b5-4831-b705-d383362cd1fa)
 
 9. Depth-First Search (DFS)
-Description: Explores a graph by going as deep as possible along each branch before backtracking.
-Time Complexity: 
-Space Complexity:
+    
+Description: Explores a graph by going as deep as possible along each branch before backtracking. 
+DFS is a **graph traversal algorithm** that explores as deeply as possible before backtracking. It is used in applications like **topological sorting, cycle detection, and pathfinding**.  
+It can be implemented **recursively** (using the call stack) or **iteratively** (using an explicit stack).
+
+**Time Complexity:**
+- **Adjacency List Representation:** \(O(V + E)\)  
+  - Each vertex and edge is visited once.
+- **Adjacency Matrix Representation:** \(O(V^2)\)  
+  - Checking adjacency takes \(O(V)\) per vertex.
+
+**Space Complexity:**
+- **Recursive Call Stack:**
+  - **Worst case:** \(O(V)\) → If the graph is skewed like a linked list.
+  - **Best case:** \(O(\log V)\) → If the graph is balanced.
+- **Visited Array:** \(O(V)\)
+- **Adjacency List Storage:** \(O(V + E)\)
+- **Total:** \(O(V + E)\), with additional \(O(V)\) recursion stack in the worst case.
+
+**Visualization of DFS Traversal:**
+
+![image](https://github.com/user-attachments/assets/78aeb7d2-289d-4668-a709-ed523c5e382a)
+
+![image](https://github.com/user-attachments/assets/0ddbf998-9530-4425-ae1b-cc50c9c967c6)
 
 
-10. Dijkstra's Algorithm
+11. Dijkstra's Algorithm
 Description: Finds the shortest paths between nodes in a graph with non-negative edge weights.
 
 Working Principle:
